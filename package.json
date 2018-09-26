@@ -1,5 +1,5 @@
 {
-  "name": "userid",
+  "name": "@one.com/userid",
   "version": "0.3.1",
   "description": "Lookup uid and gid information in node.js. Uses native POSIX bindings, not processes.",
   "main": "lib/userid.js",
