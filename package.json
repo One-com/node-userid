@@ -5,7 +5,7 @@
   "main": "lib/userid.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
-    "install": "./node-gyp/bin/node-gyp.js rebuild"
+    "install": "./scripts/build"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var childProcess = require('child_process');
+
+var gypPath;
+try {
+    gypPath = require.resolve('node-gyp');
+} catch (e) {
+    console.log('Unable to resolve gyp.');
+    process.exit(1);
+}
+
+var gypBinPath = gypPath.replace('/node-gyp/lib/node-gyp.js', '/node-gyp/bin/node-gyp.js');
+if (gypBinPath === gypPath) {
+    console.log('Unable to find gyp.');
+    process.exit(1);
+}
+
+childProcess.exec(['node', gypBinPath, 'rebuild'].join(' '), function(err, stdout, stderr) {
+    if (err) {
+        console.error('Error running gyp.', stderr);
+        return process.exit(1);
+    }
+
+    console.error(stdout);
+    process.exit(0);
+});
