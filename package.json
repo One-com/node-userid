@@ -16,10 +16,10 @@
   "gypfile": true,
   "dependencies": {
     "nan": "^2.0.9",
-    "node-gyp": "3.6.3"
+    "node-gyp": "^4.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
+    "mocha": "^6.1.4",
     "should": "^7.1.0"
   }
 }
